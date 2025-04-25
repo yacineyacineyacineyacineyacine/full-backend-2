@@ -2,6 +2,7 @@ import express from "express";
 import path, { dirname } from "path";
 import { fileURLToPath } from "url";
 import authRoutes from "./routes/authRoutes.js"
+import todosRouter from "./routes/todoRoutes.js"
 
 const app = express();
 app.use(express.json());
@@ -17,6 +18,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/auth", authRoutes);
+app.use("/todos", todosRouter);
 
 app.listen(PORT, () => {
   console.log(`server is running on port ${PORT}`);
