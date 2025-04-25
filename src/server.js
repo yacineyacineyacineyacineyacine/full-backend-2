@@ -1,5 +1,5 @@
 import express from "express";
-import path, {dirname} from "path";
+import path, { dirname } from "path";
 import { fileURLToPath } from "url";
 
 const app = express();
@@ -11,11 +11,10 @@ const __direname = dirname(__filename);
 
 app.use(express.static(path.join(__direname, "../public")));
 
-app.get("/", (req, res) =>{
+app.get("/", (req, res) => {
     res.sendFile(path.join(__direname, "public", "index.html"));
-})
+});
 
-app.listen(PORT, () =>{
-    console.log(`server is running on port ${PORT}`);
-    
-})
+app.listen(PORT, () => {
+  console.log(`server is running on port ${PORT}`);
+});
