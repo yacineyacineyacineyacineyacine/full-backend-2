@@ -18,3 +18,18 @@ Content-Type: application/json
     "username": "adelHadrine",
     "password": "milano" 
 }
+
+### Fetch all todos GET /TODOS (protected)
+GET http://localhost:5003/todos
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzQ1NjkwMDY5LCJleHAiOjE3NDU3NzY0Njl9.ek8RHlZWbCLxWbSwB7SBjFDMox33tVueIOAV5enrcbA
+
+
+### create a new todo POST /TODOS (protected)
+POST http://localhost:5003/todos
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzQ1NjkwMDY5LCJleHAiOjE3NDU3NzY0Njl9.ek8RHlZWbCLxWbSwB7SBjFDMox33tVueIOAV5enrcbA
+
+{
+    "task": "pray el maghrib"
+}
