@@ -33,3 +33,12 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzQ1Njkw
 {
     "task": "pray el maghrib"
 }
+
+### Update a todo PUT /TODOS/:ID (protected)
+PUT http://localhost:5003/todos/6
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzQ1NjkwMDY5LCJleHAiOjE3NDU3NzY0Njl9.ek8RHlZWbCLxWbSwB7SBjFDMox33tVueIOAV5enrcbA
+
+{
+    "completed": 1
+}
