@@ -16,7 +16,7 @@ router.post("/register", (req, res)=> {
         
        const insertUser =  db.prepare(`INSERT INTO users (username, password) VALUES (?, ?)`);
        const result = insertUser.run(username, hashedPassword);     
-
+              
        const defaultTodo = `Hello :) Add you first todo!`;
        const inserTodo = db.prepare(`INSERT INTO todos (user_id, task) VALUES (?, ?)`);
        inserTodo.run(result.lastInsertRowid, defaultTodo);
